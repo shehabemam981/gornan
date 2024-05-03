@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsHomeActivity">
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/searchInput"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="50dp"
+    android:visibility="gone"
+    app:endIconDrawable="@drawable/search"
+    app:endIconTintMode="screen"
+    android:hint="@string/search"
+    app:endIconTint="@color/grey"
+    app:boxCornerRadiusTopStart="20dp"
+    app:boxCornerRadiusBottomEnd="20dp"
+    tools:visibility="visible"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/searchEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:imeOptions="actionSearch"
+
+        />
+</com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/search_close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close"
+        android:backgroundTint="@color/white"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/searchInput"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconTint="@color/grey"
+        app:iconTintMode="screen"
+        android:visibility="gone"
+        android:text="@string/search"
+        tools:visibility="visible"
+        android:backgroundTint = "@color/mov"
+         app:iconSize="30dp"
+        android:shadowColor="@color/grey"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+<FrameLayout
+    android:id="@+id/MainFragment"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginVertical="25dp"
+    app:layout_constraintTop_toBottomOf="@+id/searchInput"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
+    <FrameLayout
+        android:id="@+id/itemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

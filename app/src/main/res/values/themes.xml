@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NavigationDrawer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+         <item name="colorPrimary">@color/mov</item>
+    </style>
+
+    <style name="Theme.NavigationDrawer" parent="Base.Theme.NavigationDrawer" />
+
+
+    <style name="ShapeAppearance">
+        <item name="android:radius">20dp</item>
+    </style>
+
+    <style name="ShapeCardItem">
+        <item name="cornerSizeTopLeft">100dp</item>
+        <item name="cornerSizeTopRight">100dp</item>
+        <item name="background">@color/mov</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="CustomCardCorners" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeCardItem</item>
+    </style>
+
+    <style name="shapableImage">
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+    <style name="shapableImage1">
+     <item name="cornerSize">20dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+
+
+
+</resources>
